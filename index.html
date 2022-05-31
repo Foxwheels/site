@@ -9,6 +9,7 @@
     <meta name="description" content="Simplified Bootstrap template with sticky menu">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/sticky-menu.css" rel="stylesheet">
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -43,7 +44,17 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1>Dit is een test site</h1>
+                    <py-script src="./list.py"></py-script>
                     <a class="btn btn-primary page-scroll" href="#about">Click To Scroll Down!</a>
+                    <div>
+                        <input id="new-task-content" class="border flex-1 mr-3 border-gray-300 p-2 rounded" type="text">
+                        <button id="new-task-btn" class="p-2 text-white bg-blue-600 border border-blue-600 rounded" type="submit" pys-onClick="add_task">
+                        Add task
+                        </button>
+                    </div>
+
+                    <py-list id="myList"></py-list>
+                    <div id="list-tasks-container" class="flex flex-col-reverse mt-4"></div>
                 </div>
             </div>
         </div>
